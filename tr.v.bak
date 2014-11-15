@@ -8,7 +8,7 @@ module tr(rd2, tr, clk);
 	always @(posedge clk) begin
 		case (ir[31:27])
 			8'b01010: begin //push
-				tr <= tr;
+				tr <= 
 			end
 		endcase
 	end

@@ -9,10 +9,10 @@ module pc(phase, ct_taken, dr, pc, ma, clk);
 	input ct_taken;
 	input [31:0] dr;
 	output [31:0] pc;
-	output [7:0] ma;
+	output [31:0] ma;
 	input clk;
 	reg [31:0] pc; 
-	reg [7:0] ma;
+	reg [31:0] ma;
 	
 	always @(posedge clk) begin
 		if (phase[`f] == 1) begin

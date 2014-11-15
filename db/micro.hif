@@ -31,7 +31,7 @@ ON
 # case_sensitive
 # source_file
 pc.v
-1f1c2a7925ceea6d505666e4e9eee8
+3d33cc313e43e93f5af01eb66f38748e
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -49,11 +49,48 @@ VERILOG_CONSTANT_LOOP_LIMIT
 VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
-# hierarchies {
-pc:pc_obj
-}
 # macro_sequence
 f4w0f4w0
+# end
+# entity
+register_file
+# storage
+db|micro.(2).cnf
+db|micro.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+register_file.v
+01379823beaaf497d37e526461e830
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# include_file {
+pc.v
+3d33cc313e43e93f5af01eb66f38748e
+}
+# hierarchies {
+register_file:register_file_obj
+}
+# macro_sequence
+f4w0r3w0
 # end
 # entity
 memory
@@ -67,7 +104,7 @@ ON
 # case_sensitive
 # source_file
 memory.v
-76496adcac30a04697a210e88f2c91b9
+665da2cc19d91a613aab018e3c75f28
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -87,27 +124,24 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # include_file {
 pc.v
-1f1c2a7925ceea6d505666e4e9eee8
-}
-# hierarchies {
-memory:memory_obj
+3d33cc313e43e93f5af01eb66f38748e
 }
 # macro_sequence
 f4w0f4m1
 # end
 # entity
-register_file
+phase_gen
 # storage
-db|micro.(3).cnf
-db|micro.(3).cnf
+db|micro.(5).cnf
+db|micro.(5).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_sensitive
 # source_file
-register_file.v
-17ea13479bdcb98e151b68d0449898a
+phase_gen.v
+6b6e341c63b470fc444cfb45581823c
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -125,11 +159,55 @@ VERILOG_CONSTANT_LOOP_LIMIT
 VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
+# include_file {
+pc.v
+3d33cc313e43e93f5af01eb66f38748e
+}
 # hierarchies {
-register_file:register_file_obj
+phase_gen:phase_gen_obj
 }
 # macro_sequence
-
+f4w0f4w0
+# end
+# entity
+alu
+# storage
+db|micro.(3).cnf
+db|micro.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+alu.v
+3736f58d8718c039c21246464827eee
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# include_file {
+pc.v
+3d33cc313e43e93f5af01eb66f38748e
+}
+# hierarchies {
+alu:alu_obj
+}
+# macro_sequence
+f4w0x2
 # end
 # entity
 micro
@@ -143,7 +221,7 @@ ON
 # case_sensitive
 # source_file
 micro.v
-75d8f73b76f9d8fda582a3da1529785d
+7f6549efcc782dfb8169dd052d08
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -163,50 +241,10 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # include_file {
 pc.v
-1f1c2a7925ceea6d505666e4e9eee8
+3d33cc313e43e93f5af01eb66f38748e
 }
 # hierarchies {
 |
-}
-# macro_sequence
-f4w0
-# end
-# entity
-ir
-# storage
-db|micro.(2).cnf
-db|micro.(2).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-ir.v
-b344d64efe6f43288f076dc937b9f31
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# include_file {
-pc.v
-1f1c2a7925ceea6d505666e4e9eee8
-}
-# hierarchies {
-ir:ir_obj
 }
 # macro_sequence
 f4w0
