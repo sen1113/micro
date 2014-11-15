@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="micro">
+		<CBX_INST_ENTRY INSTANCE_NAME="|micro|memory:memory_obj|embedded_ram:embedded_ram_obj|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_1dl1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

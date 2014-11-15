@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for micro
-Tue Nov 11 18:29:14 2014
+Sat Nov 15 23:12:08 2014
 Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
 
 
@@ -62,15 +62,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II TimeQuest Timing Analyzer
     Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Nov 11 18:29:13 2014
+    Info: Processing started: Sat Nov 15 23:12:07 2014
 Info: Command: quartus_sta micro -c micro
 Info: qsta_default_script.tcl version: #1
 Warning: Parallel compilation is not licensed and has been disabled
 Warning: Timing netlist is empty. No timing reports will be generated.
 Critical Warning: Synopsys Design Constraints File file not found: 'micro.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 231 megabytes
-    Info: Processing ended: Tue Nov 11 18:29:14 2014
+    Info: Peak virtual memory: 232 megabytes
+    Info: Processing ended: Sat Nov 15 23:12:08 2014
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

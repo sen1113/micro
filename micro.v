@@ -10,7 +10,7 @@ module micro(clk, rst);
 	wire [`f: `w] phase;
 	wire ct_taken, hlt;
 	wire [2:0] ra1, ra2, wa;
-	wire [7:0] ma,
+	wire [7:0] ma;
 	wire [31:0] rd1, rd2, wd;
 	wire [31:0] sr, tr, dr, md_in, md_out, ir;
 	wire [255:0] rf;
@@ -27,6 +27,6 @@ module micro(clk, rst);
 	/*‚±‚±‚©‚«‚©‚¦‚Ä*/
 	//embedded_ram ram( clk, wd,	rdaddress,	wraddress,	wren,	mdr);
 	
-	//memory memory_obj(phase, md_in, md_out, ma, ir, clk);
+	memory memory_obj(phase, md_in, md_out, ma, ir, clk);
 	
 endmodule
