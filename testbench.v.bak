@@ -1,0 +1,12 @@
+`timescale 1ns / 1ps
+module testbench;
+	//input 
+	reg CLK, N_RST;
+	reg [31:0] ir;
+	
+	
+	//output
+	wire[31:0] dr;
+	
+	ir_dec ir_dec_obj(phase, ir, ra1, ra2, CLK);
+	alu alu_obj();

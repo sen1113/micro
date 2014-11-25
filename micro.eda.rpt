@@ -1,5 +1,5 @@
 EDA Netlist Writer report for micro
-Sat Nov 15 23:12:09 2014
+Wed Nov 26 03:42:33 2014
 Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sat Nov 15 23:12:09 2014 ;
+; EDA Netlist Writer Status ; Successful - Wed Nov 26 03:42:33 2014 ;
 ; Revision Name             ; micro                                 ;
 ; Top-level Entity Name     ; micro                                 ;
 ; Family                    ; Cyclone                               ;
@@ -82,14 +82,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II EDA Netlist Writer
     Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Nov 15 23:12:09 2014
+    Info: Processing started: Wed Nov 26 03:42:32 2014
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off micro -c micro
 Info: Generated simulation netlist will be non-hierarchical because the design has SignalTap II partitions, termination control logic and/or a design partition that contains bidirectional ports
 Info: Generated files "micro.vo" and "micro_v.sdo" in directory "C:/Users/sen/micro/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 233 megabytes
-    Info: Processing ended: Sat Nov 15 23:12:09 2014
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Wed Nov 26 03:42:33 2014
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 

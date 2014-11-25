@@ -1,5 +1,5 @@
 Fitter report for micro
-Sat Nov 15 23:12:06 2014
+Wed Nov 26 03:42:29 2014
 Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
 
 
@@ -10,22 +10,24 @@ Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
   2. Fitter Summary
   3. Fitter Settings
   4. Parallel Compilation
-  5. Incremental Compilation Preservation Summary
-  6. Incremental Compilation Partition Settings
-  7. Incremental Compilation Placement Preservation
-  8. Pin-Out File
-  9. Fitter Resource Usage Summary
- 10. Fitter Partition Statistics
- 11. Input Pins
- 12. I/O Bank Usage
- 13. All Package Pins
- 14. Output Pin Default Load For Reported TCO
- 15. Fitter Resource Utilization by Entity
- 16. Delay Chain Summary
- 17. Pad To Core Delay Chain Fanout
- 18. Interconnect Usage Summary
- 19. Fitter Device Options
- 20. Fitter Messages
+  5. Ignored Assignments
+  6. Incremental Compilation Preservation Summary
+  7. Incremental Compilation Partition Settings
+  8. Incremental Compilation Placement Preservation
+  9. Pin-Out File
+ 10. Fitter Resource Usage Summary
+ 11. Fitter Partition Statistics
+ 12. Input Pins
+ 13. Output Pins
+ 14. I/O Bank Usage
+ 15. All Package Pins
+ 16. Output Pin Default Load For Reported TCO
+ 17. Fitter Resource Utilization by Entity
+ 18. Delay Chain Summary
+ 19. Pad To Core Delay Chain Fanout
+ 20. Interconnect Usage Summary
+ 21. Fitter Device Options
+ 22. Fitter Messages
 
 
 
@@ -51,7 +53,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------+
 ; Fitter Summary                                                        ;
 +-----------------------+-----------------------------------------------+
-; Fitter Status         ; Successful - Sat Nov 15 23:12:06 2014         ;
+; Fitter Status         ; Successful - Wed Nov 26 03:42:29 2014         ;
 ; Quartus II Version    ; 11.0 Build 208 07/03/2011 SP 1 SJ Web Edition ;
 ; Revision Name         ; micro                                         ;
 ; Top-level Entity Name ; micro                                         ;
@@ -59,7 +61,7 @@ applicable agreement for further details.
 ; Device                ; EP1C6Q240C8                                   ;
 ; Timing Models         ; Final                                         ;
 ; Total logic elements  ; 0 / 5,980 ( 0 % )                             ;
-; Total pins            ; 2 / 185 ( 1 % )                               ;
+; Total pins            ; 74 / 185 ( 40 % )                             ;
 ; Total virtual pins    ; 0                                             ;
 ; Total memory bits     ; 0 / 92,160 ( 0 % )                            ;
 ; Total PLLs            ; 0 / 2 ( 0 % )                                 ;
@@ -123,14 +125,24 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++----------------------------------------------------------------------------------------+
+; Ignored Assignments                                                                    ;
++----------+----------------+--------------+------------+---------------+----------------+
+; Name     ; Ignored Entity ; Ignored From ; Ignored To ; Ignored Value ; Ignored Source ;
++----------+----------------+--------------+------------+---------------+----------------+
+; Location ;                ;              ; CLK        ; PIN_28        ; QSF Assignment ;
+; Location ;                ;              ; N_RST      ; PIN_240       ; QSF Assignment ;
++----------+----------------+--------------+------------+---------------+----------------+
+
+
 +----------------------------------------------+
 ; Incremental Compilation Preservation Summary ;
 +---------------------+------------------------+
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 5 ( 0.00 % )       ;
-;     -- Achieved     ; 0 / 5 ( 0.00 % )       ;
+;     -- Requested    ; 0 / 77 ( 0.00 % )      ;
+;     -- Achieved     ; 0 / 77 ( 0.00 % )      ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -153,7 +165,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 3       ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 75      ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 2       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -194,7 +206,7 @@ The pin-out file can be found in C:/Users/sen/micro/micro.pin.
 ; Logic elements in carry chains              ; 0                  ;
 ; User inserted logic elements                ; 0                  ;
 ; Virtual pins                                ; 0                  ;
-; I/O pins                                    ; 2 / 185 ( 1 % )    ;
+; I/O pins                                    ; 74 / 185 ( 40 % )  ;
 ;     -- Clock pins                           ; 0 / 2 ( 0 % )      ;
 ; Global signals                              ; 0                  ;
 ; M4Ks                                        ; 0 / 20 ( 0 % )     ;
@@ -239,7 +251,7 @@ The pin-out file can be found in C:/Users/sen/micro/micro.pin.
 ;                                             ;                  ;                                ;
 ; Total registers                             ; 0 / 2990 ( 0 % ) ; 0 / 2990 ( 0 % )               ;
 ; Virtual pins                                ; 0                ; 0                              ;
-; I/O pins                                    ; 2                ; 0                              ;
+; I/O pins                                    ; 74               ; 0                              ;
 ; DSP block 9-bit elements                    ; 0                ; 0                              ;
 ; Total memory bits                           ; 0                ; 0                              ;
 ; Total RAM block bits                        ; 0                ; 0                              ;
@@ -260,7 +272,7 @@ The pin-out file can be found in C:/Users/sen/micro/micro.pin.
 ;                                             ;                  ;                                ;
 ; Partition Interface                         ;                  ;                                ;
 ;     -- Input Ports                          ; 2                ; 0                              ;
-;     -- Output Ports                         ; 0                ; 0                              ;
+;     -- Output Ports                         ; 72               ; 0                              ;
 ;     -- Bidir Ports                          ; 0                ; 0                              ;
 ;                                             ;                  ;                                ;
 ; Registered Ports                            ;                  ;                                ;
@@ -279,26 +291,106 @@ The pin-out file can be found in C:/Users/sen/micro/micro.pin.
 +---------------------------------------------+------------------+--------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Input Pins                                                                                                                                                                                                                                                 ;
-+------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
-+------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; clk  ; 4     ; 1        ; 0            ; 19           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; rst  ; 2     ; 1        ; 0            ; 20           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-+------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                                                                  ;
++-------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; Name  ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
++-------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; clk   ; 46    ; 1        ; 0            ; 5            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; n_rst ; 14    ; 1        ; 0            ; 16           ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
++-------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
-+----------------------------------------------------------+
-; I/O Bank Usage                                           ;
-+----------+----------------+---------------+--------------+
-; I/O Bank ; Usage          ; VCCIO Voltage ; VREF Voltage ;
-+----------+----------------+---------------+--------------+
-; 1        ; 4 / 44 ( 9 % ) ; 3.3V          ; --           ;
-; 2        ; 0 / 48 ( 0 % ) ; 3.3V          ; --           ;
-; 3        ; 0 / 45 ( 0 % ) ; 3.3V          ; --           ;
-; 4        ; 0 / 48 ( 0 % ) ; 3.3V          ; --           ;
-+----------+----------------+---------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                                                                                 ;
++-------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+-------+----------------------+---------------------+
+; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
++-------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+-------+----------------------+---------------------+
+; SEG_OUT[0]  ; 57    ; 1        ; 0            ; 2            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[10] ; 67    ; 4        ; 6            ; 0            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[11] ; 68    ; 4        ; 6            ; 0            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[12] ; 73    ; 4        ; 6            ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[13] ; 74    ; 4        ; 8            ; 0            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[14] ; 75    ; 4        ; 8            ; 0            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[15] ; 76    ; 4        ; 8            ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[16] ; 77    ; 4        ; 10           ; 0            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[17] ; 78    ; 4        ; 10           ; 0            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[18] ; 79    ; 4        ; 10           ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[19] ; 82    ; 4        ; 12           ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[1]  ; 58    ; 1        ; 0            ; 2            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[20] ; 83    ; 4        ; 14           ; 0            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[21] ; 84    ; 4        ; 14           ; 0            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[22] ; 85    ; 4        ; 14           ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[23] ; 86    ; 4        ; 16           ; 0            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[24] ; 87    ; 4        ; 16           ; 0            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[25] ; 88    ; 4        ; 16           ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[26] ; 93    ; 4        ; 20           ; 0            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[27] ; 94    ; 4        ; 20           ; 0            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[28] ; 95    ; 4        ; 20           ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[29] ; 98    ; 4        ; 22           ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[2]  ; 59    ; 1        ; 0            ; 1            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[30] ; 99    ; 4        ; 24           ; 0            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[31] ; 100   ; 4        ; 24           ; 0            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[32] ; 101   ; 4        ; 24           ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[33] ; 104   ; 4        ; 26           ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[34] ; 105   ; 4        ; 28           ; 0            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[35] ; 106   ; 4        ; 28           ; 0            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[36] ; 107   ; 4        ; 28           ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[37] ; 108   ; 4        ; 30           ; 0            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[38] ; 113   ; 4        ; 30           ; 0            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[39] ; 114   ; 4        ; 30           ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[3]  ; 60    ; 1        ; 0            ; 1            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[40] ; 115   ; 4        ; 32           ; 0            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[41] ; 116   ; 4        ; 32           ; 0            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[42] ; 117   ; 4        ; 32           ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[43] ; 118   ; 4        ; 34           ; 0            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[44] ; 119   ; 4        ; 34           ; 0            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[45] ; 120   ; 4        ; 34           ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[46] ; 121   ; 3        ; 35           ; 1            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[47] ; 122   ; 3        ; 35           ; 1            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[48] ; 123   ; 3        ; 35           ; 2            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[49] ; 124   ; 3        ; 35           ; 2            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[4]  ; 61    ; 4        ; 2            ; 0            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[50] ; 125   ; 3        ; 35           ; 2            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[51] ; 126   ; 3        ; 35           ; 3            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[52] ; 127   ; 3        ; 35           ; 3            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[53] ; 128   ; 3        ; 35           ; 3            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[54] ; 131   ; 3        ; 35           ; 4            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[55] ; 132   ; 3        ; 35           ; 4            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[56] ; 133   ; 3        ; 35           ; 4            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[57] ; 134   ; 3        ; 35           ; 5            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[58] ; 135   ; 3        ; 35           ; 5            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[59] ; 136   ; 3        ; 35           ; 6            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[5]  ; 62    ; 4        ; 2            ; 0            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[60] ; 137   ; 3        ; 35           ; 6            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[61] ; 138   ; 3        ; 35           ; 7            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[62] ; 139   ; 3        ; 35           ; 7            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[63] ; 140   ; 3        ; 35           ; 8            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[6]  ; 63    ; 4        ; 2            ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[7]  ; 64    ; 4        ; 4            ; 0            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[8]  ; 65    ; 4        ; 4            ; 0            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_OUT[9]  ; 66    ; 4        ; 4            ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 10 pF ; -                    ; -                   ;
+; SEG_SEL[0]  ; 4     ; 1        ; 0            ; 19           ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 10 pF ; -                    ; -                   ;
+; SEG_SEL[1]  ; 45    ; 1        ; 0            ; 6            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 10 pF ; -                    ; -                   ;
+; SEG_SEL[2]  ; 156   ; 3        ; 35           ; 13           ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 10 pF ; -                    ; -                   ;
+; SEG_SEL[3]  ; 233   ; 2        ; 6            ; 21           ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 10 pF ; -                    ; -                   ;
+; SEG_SEL[4]  ; 43    ; 1        ; 0            ; 7            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 10 pF ; -                    ; -                   ;
+; SEG_SEL[5]  ; 215   ; 2        ; 16           ; 21           ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 10 pF ; -                    ; -                   ;
+; SEG_SEL[6]  ; 181   ; 2        ; 34           ; 21           ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 10 pF ; -                    ; -                   ;
+; SEG_SEL[7]  ; 5     ; 1        ; 0            ; 19           ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 10 pF ; -                    ; -                   ;
++-------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+-------+----------------------+---------------------+
+
+
++------------------------------------------------------------+
+; I/O Bank Usage                                             ;
++----------+------------------+---------------+--------------+
+; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
++----------+------------------+---------------+--------------+
+; 1        ; 12 / 44 ( 27 % ) ; 3.3V          ; --           ;
+; 2        ; 3 / 48 ( 6 % )   ; 3.3V          ; --           ;
+; 3        ; 19 / 45 ( 42 % ) ; 3.3V          ; --           ;
+; 4        ; 42 / 48 ( 88 % ) ; 3.3V          ; --           ;
++----------+------------------+---------------+--------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -307,10 +399,10 @@ The pin-out file can be found in C:/Users/sen/micro/micro.pin.
 ; Location ; Pad Number ; I/O Bank ; Pin Name/Usage                           ; Dir.   ; I/O Standard ; Voltage ; I/O Type   ; User Assignment ; Bus Hold ; Weak Pull Up ;
 +----------+------------+----------+------------------------------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 ; 1        ; 0          ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 2        ; 1          ; 1        ; rst                                      ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 2        ; 1          ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 3        ; 2          ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 4        ; 3          ; 1        ; clk                                      ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 5        ; 4          ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 4        ; 3          ; 1        ; SEG_SEL[0]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 5        ; 4          ; 1        ; SEG_SEL[7]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 6        ; 5          ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 7        ; 6          ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 8        ; 7          ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -319,7 +411,7 @@ The pin-out file can be found in C:/Users/sen/micro/micro.pin.
 ; 11       ; 8          ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 12       ; 9          ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 13       ; 10         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 14       ; 11         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 14       ; 11         ; 1        ; n_rst                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 15       ; 12         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 16       ; 13         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 17       ; 14         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -348,10 +440,10 @@ The pin-out file can be found in C:/Users/sen/micro/micro.pin.
 ; 40       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 41       ; 33         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 42       ; 34         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 43       ; 35         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 43       ; 35         ; 1        ; SEG_SEL[4]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 44       ; 36         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 45       ; 37         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 46       ; 38         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 45       ; 37         ; 1        ; SEG_SEL[1]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 46       ; 38         ; 1        ; clk                                      ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 47       ; 39         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 48       ; 40         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 49       ; 41         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -362,90 +454,90 @@ The pin-out file can be found in C:/Users/sen/micro/micro.pin.
 ; 54       ; 44         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 55       ; 45         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 56       ; 46         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 57       ; 47         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 58       ; 48         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 59       ; 49         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 60       ; 50         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 61       ; 51         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 62       ; 52         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 63       ; 53         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 64       ; 54         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 65       ; 55         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 66       ; 56         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 67       ; 57         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 68       ; 58         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 57       ; 47         ; 1        ; SEG_OUT[0]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 58       ; 48         ; 1        ; SEG_OUT[1]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 59       ; 49         ; 1        ; SEG_OUT[2]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 60       ; 50         ; 1        ; SEG_OUT[3]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 61       ; 51         ; 4        ; SEG_OUT[4]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 62       ; 52         ; 4        ; SEG_OUT[5]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 63       ; 53         ; 4        ; SEG_OUT[6]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 64       ; 54         ; 4        ; SEG_OUT[7]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 65       ; 55         ; 4        ; SEG_OUT[8]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 66       ; 56         ; 4        ; SEG_OUT[9]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 67       ; 57         ; 4        ; SEG_OUT[10]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 68       ; 58         ; 4        ; SEG_OUT[11]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 69       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 70       ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 71       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 72       ;            ;          ; VCCINT                                   ; power  ;              ; 1.5V    ; --         ;                 ; --       ; --           ;
-; 73       ; 59         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 74       ; 60         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 75       ; 61         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 76       ; 62         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 77       ; 63         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 78       ; 64         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 79       ; 65         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 73       ; 59         ; 4        ; SEG_OUT[12]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 74       ; 60         ; 4        ; SEG_OUT[13]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 75       ; 61         ; 4        ; SEG_OUT[14]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 76       ; 62         ; 4        ; SEG_OUT[15]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 77       ; 63         ; 4        ; SEG_OUT[16]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 78       ; 64         ; 4        ; SEG_OUT[17]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 79       ; 65         ; 4        ; SEG_OUT[18]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 80       ; 66         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 81       ; 67         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 82       ; 68         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 83       ; 69         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 84       ; 70         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 85       ; 71         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 86       ; 72         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 87       ; 73         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 88       ; 74         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 82       ; 68         ; 4        ; SEG_OUT[19]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 83       ; 69         ; 4        ; SEG_OUT[20]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 84       ; 70         ; 4        ; SEG_OUT[21]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 85       ; 71         ; 4        ; SEG_OUT[22]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 86       ; 72         ; 4        ; SEG_OUT[23]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 87       ; 73         ; 4        ; SEG_OUT[24]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 88       ; 74         ; 4        ; SEG_OUT[25]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 89       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 90       ;            ;          ; VCCINT                                   ; power  ;              ; 1.5V    ; --         ;                 ; --       ; --           ;
 ; 91       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 92       ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; 93       ; 75         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 94       ; 76         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 95       ; 77         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 93       ; 75         ; 4        ; SEG_OUT[26]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 94       ; 76         ; 4        ; SEG_OUT[27]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 95       ; 77         ; 4        ; SEG_OUT[28]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 96       ; 78         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 97       ; 79         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 98       ; 80         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 99       ; 81         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 100      ; 82         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 101      ; 83         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 98       ; 80         ; 4        ; SEG_OUT[29]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 99       ; 81         ; 4        ; SEG_OUT[30]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 100      ; 82         ; 4        ; SEG_OUT[31]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 101      ; 83         ; 4        ; SEG_OUT[32]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 102      ; 84         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 103      ; 85         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 104      ; 86         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 105      ; 87         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 106      ; 88         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 107      ; 89         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 108      ; 90         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 104      ; 86         ; 4        ; SEG_OUT[33]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 105      ; 87         ; 4        ; SEG_OUT[34]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 106      ; 88         ; 4        ; SEG_OUT[35]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 107      ; 89         ; 4        ; SEG_OUT[36]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 108      ; 90         ; 4        ; SEG_OUT[37]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 109      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 110      ;            ;          ; VCCINT                                   ; power  ;              ; 1.5V    ; --         ;                 ; --       ; --           ;
 ; 111      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 112      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; 113      ; 91         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 114      ; 92         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 115      ; 93         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 116      ; 94         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 117      ; 95         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 118      ; 96         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 119      ; 97         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 120      ; 98         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 121      ; 99         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 122      ; 100        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 123      ; 101        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 124      ; 102        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 125      ; 103        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 126      ; 104        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 127      ; 105        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 128      ; 106        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 113      ; 91         ; 4        ; SEG_OUT[38]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 114      ; 92         ; 4        ; SEG_OUT[39]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 115      ; 93         ; 4        ; SEG_OUT[40]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 116      ; 94         ; 4        ; SEG_OUT[41]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 117      ; 95         ; 4        ; SEG_OUT[42]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 118      ; 96         ; 4        ; SEG_OUT[43]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 119      ; 97         ; 4        ; SEG_OUT[44]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 120      ; 98         ; 4        ; SEG_OUT[45]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 121      ; 99         ; 3        ; SEG_OUT[46]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 122      ; 100        ; 3        ; SEG_OUT[47]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 123      ; 101        ; 3        ; SEG_OUT[48]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 124      ; 102        ; 3        ; SEG_OUT[49]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 125      ; 103        ; 3        ; SEG_OUT[50]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 126      ; 104        ; 3        ; SEG_OUT[51]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 127      ; 105        ; 3        ; SEG_OUT[52]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 128      ; 106        ; 3        ; SEG_OUT[53]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 129      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 130      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; 131      ; 107        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 132      ; 108        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 133      ; 109        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 134      ; 110        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 135      ; 111        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 136      ; 112        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 137      ; 113        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 138      ; 114        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 139      ; 115        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 140      ; 116        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 131      ; 107        ; 3        ; SEG_OUT[54]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 132      ; 108        ; 3        ; SEG_OUT[55]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 133      ; 109        ; 3        ; SEG_OUT[56]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 134      ; 110        ; 3        ; SEG_OUT[57]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 135      ; 111        ; 3        ; SEG_OUT[58]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 136      ; 112        ; 3        ; SEG_OUT[59]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 137      ; 113        ; 3        ; SEG_OUT[60]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 138      ; 114        ; 3        ; SEG_OUT[61]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 139      ; 115        ; 3        ; SEG_OUT[62]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 140      ; 116        ; 3        ; SEG_OUT[63]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 141      ; 117        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 142      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 143      ; 118        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -461,7 +553,7 @@ The pin-out file can be found in C:/Users/sen/micro/micro.pin.
 ; 153      ; 126        ; 3        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 154      ;            ;          ; VCCA_PLL2                                ; power  ;              ; 1.5V    ; --         ;                 ; --       ; --           ;
 ; 155      ; 127        ; 3        ; #TDI                                     ; input  ;              ;         ; --         ;                 ; --       ; --           ;
-; 156      ; 128        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 156      ; 128        ; 3        ; SEG_SEL[2]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 157      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 158      ; 129        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 159      ; 130        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -486,7 +578,7 @@ The pin-out file can be found in C:/Users/sen/micro/micro.pin.
 ; 178      ; 147        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 179      ; 148        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 180      ; 149        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 181      ; 150        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 181      ; 150        ; 2        ; SEG_SEL[6]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 182      ; 151        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 183      ; 152        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 184      ; 153        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -520,7 +612,7 @@ The pin-out file can be found in C:/Users/sen/micro/micro.pin.
 ; 212      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 213      ; 174        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 214      ; 175        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 215      ; 176        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 215      ; 176        ; 2        ; SEG_SEL[5]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 216      ; 177        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 217      ; 178        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 218      ; 179        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -538,7 +630,7 @@ The pin-out file can be found in C:/Users/sen/micro/micro.pin.
 ; 230      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 231      ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 232      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 233      ; 190        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 233      ; 190        ; 2        ; SEG_SEL[3]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 234      ; 191        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 235      ; 192        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 236      ; 193        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -577,19 +669,91 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+-------------+--------------+-------------+------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; M4Ks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------+--------------+-------------+------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; |micro                     ; 0 (0)       ; 0            ; 0           ; 0    ; 2    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |micro              ;              ;
+; |micro                     ; 0 (0)       ; 0            ; 0           ; 0    ; 74   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |micro              ;              ;
 +----------------------------+-------------+--------------+-------------+------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------+
-; Delay Chain Summary                                                           ;
-+------+----------+---------------+---------------+-----------------------+-----+
-; Name ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
-+------+----------+---------------+---------------+-----------------------+-----+
-; clk  ; Input    ; OFF           ; OFF           ; --                    ; --  ;
-; rst  ; Input    ; OFF           ; OFF           ; --                    ; --  ;
-+------+----------+---------------+---------------+-----------------------+-----+
++--------------------------------------------------------------------------------------+
+; Delay Chain Summary                                                                  ;
++-------------+----------+---------------+---------------+-----------------------+-----+
+; Name        ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
++-------------+----------+---------------+---------------+-----------------------+-----+
+; clk         ; Input    ; OFF           ; OFF           ; --                    ; --  ;
+; n_rst       ; Input    ; OFF           ; OFF           ; --                    ; --  ;
+; SEG_OUT[0]  ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[1]  ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[2]  ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[3]  ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[4]  ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[5]  ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[6]  ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[7]  ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[8]  ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[9]  ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[10] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[11] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[12] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[13] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[14] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[15] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[16] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[17] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[18] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[19] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[20] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[21] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[22] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[23] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[24] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[25] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[26] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[27] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[28] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[29] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[30] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[31] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[32] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[33] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[34] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[35] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[36] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[37] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[38] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[39] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[40] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[41] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[42] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[43] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[44] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[45] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[46] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[47] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[48] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[49] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[50] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[51] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[52] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[53] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[54] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[55] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[56] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[57] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[58] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[59] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[60] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[61] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[62] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_OUT[63] ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_SEL[0]  ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_SEL[1]  ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_SEL[2]  ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_SEL[3]  ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_SEL[4]  ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_SEL[5]  ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_SEL[6]  ; Output   ; --            ; --            ; --                    ; --  ;
+; SEG_SEL[7]  ; Output   ; --            ; --            ; --                    ; --  ;
++-------------+----------+---------------+---------------+-----------------------+-----+
 
 
 +---------------------------------------------------+
@@ -598,7 +762,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout ; Pad To Core Index ; Setting ;
 +---------------------+-------------------+---------+
 ; clk                 ;                   ;         ;
-; rst                 ;                   ;         ;
+; n_rst               ;                   ;         ;
 +---------------------+-------------------+---------+
 
 
@@ -641,7 +805,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Nov 15 23:12:05 2014
+    Info: Processing started: Wed Nov 26 03:42:27 2014
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off micro -c micro
 Warning: Parallel compilation is not licensed and has been disabled
 Info: Selected device EP1C6Q240C8 for design "micro"
@@ -652,12 +816,22 @@ Info: Device migration not selected. If you intend to use device migration later
 Info: Fitter converted 2 user pins into dedicated programming pins
     Info: Pin ~nCSO~ is reserved at location 24
     Info: Pin ~ASDO~ is reserved at location 37
-Critical Warning: No exact pin location assignment(s) for 2 pins of 2 total pins
+Critical Warning: No exact pin location assignment(s) for 10 pins of 74 total pins
     Info: Pin clk not assigned to an exact location on the device
-    Info: Pin rst not assigned to an exact location on the device
+    Info: Pin n_rst not assigned to an exact location on the device
+    Info: Pin SEG_SEL[0] not assigned to an exact location on the device
+    Info: Pin SEG_SEL[1] not assigned to an exact location on the device
+    Info: Pin SEG_SEL[2] not assigned to an exact location on the device
+    Info: Pin SEG_SEL[3] not assigned to an exact location on the device
+    Info: Pin SEG_SEL[4] not assigned to an exact location on the device
+    Info: Pin SEG_SEL[5] not assigned to an exact location on the device
+    Info: Pin SEG_SEL[6] not assigned to an exact location on the device
+    Info: Pin SEG_SEL[7] not assigned to an exact location on the device
 Info: Timing-driven compilation is using the TimeQuest Timing Analyzer
-Warning: Timing netlist is empty. No timing reports will be generated.
 Critical Warning: Synopsys Design Constraints File file not found: 'micro.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info: No user constrained base clocks found in the design
+Info: The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning: No clocks defined in design.
 Info: Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Extra Info: Performing register packing on registers with non-logic cell location assignments
 Extra Info: Completed register packing on registers with non-logic cell location assignments
@@ -672,15 +846,18 @@ Extra Info: Moving registers into I/O cells, LUTs, and RAM blocks to improve tim
 Info: Finished moving registers into I/O cells, LUTs, and RAM blocks
 Info: Finished register packing
 Info: Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info: Number of I/O pins in group: 2 (unused VREF, 3.3V VCCIO, 2 input, 0 output, 0 bidirectional)
+    Info: Number of I/O pins in group: 10 (unused VREF, 3.3V VCCIO, 2 input, 8 output, 0 bidirectional)
         Info: I/O standards used: 3.3-V LVTTL.
 Info: I/O bank details before I/O pin placement
     Info: Statistics of I/O banks
-        Info: I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 2 total pin(s) used --  42 pins available
+        Info: I/O bank number 1 does not use VREF pins and has 3.3V VCCIO pins. 6 total pin(s) used --  38 pins available
         Info: I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  48 pins available
-        Info: I/O bank number 3 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  45 pins available
-        Info: I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  48 pins available
-Info: Fitter preparation operations ending: elapsed time is 00:00:01
+        Info: I/O bank number 3 does not use VREF pins and has 3.3V VCCIO pins. 18 total pin(s) used --  27 pins available
+        Info: I/O bank number 4 does not use VREF pins and has 3.3V VCCIO pins. 42 total pin(s) used --  6 pins available
+Warning: Ignored locations or region assignments to the following nodes
+    Warning: Node "CLK" is assigned to location or region, but does not exist in design
+    Warning: Node "N_RST" is assigned to location or region, but does not exist in design
+Info: Fitter preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
@@ -697,11 +874,12 @@ Info: Completed Fixed Delay Chain Operation
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
 Info: Completed Auto Delay Chain Operation
+Warning: Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info: Quartus II Fitter was successful. 0 errors, 6 warnings
+Info: Quartus II Fitter was successful. 0 errors, 10 warnings
     Info: Peak virtual memory: 307 megabytes
-    Info: Processing ended: Sat Nov 15 23:12:06 2014
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Wed Nov 26 03:42:29 2014
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

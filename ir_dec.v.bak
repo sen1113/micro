@@ -1,0 +1,21 @@
+`define f 4
+`define r 3
+`define x 2
+`define m 1
+`define w 0
+
+//-ir_dec
+module ir_dec(phase, ir, ra1, ra2, clk);
+	input clk;
+	input [`f: `w] phase;
+	input [31:0] ir;
+	
+	output [2:0] ra1, ra2;
+	
+	always @(posedge clk) begin
+	//ra1<=;
+	//ra2<=;
+	end
+		
+endmodule// ir_dec
+	

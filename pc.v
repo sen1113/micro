@@ -1,11 +1,10 @@
-`define f 4
-`define r 3
+`define f 0
+`define r 1
 `define x 2
-`define m 1
-`define w 0
-
+`define m 3
+`define w 4
 module pc(phase, ct_taken, dr, pc, ma, clk);
-	input [`f:`w] phase;
+	input [`w:`f] phase;
 	input ct_taken;
 	input [31:0] dr;
 	output [31:0] pc;

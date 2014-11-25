@@ -57,4 +57,82 @@ set_global_assignment -name VERILOG_FILE embedded_ram.v
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (Verilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+
+set_location_assignment PIN_28 -to CLK
+set_location_assignment PIN_240 -to N_RST
+
+set_location_assignment PIN_140 -to SEG_OUT[63]
+set_location_assignment PIN_139 -to SEG_OUT[62]
+set_location_assignment PIN_138 -to SEG_OUT[61]
+set_location_assignment PIN_137 -to SEG_OUT[60]
+set_location_assignment PIN_136 -to SEG_OUT[59]
+set_location_assignment PIN_135 -to SEG_OUT[58]
+set_location_assignment PIN_134 -to SEG_OUT[57]
+set_location_assignment PIN_133 -to SEG_OUT[56]
+
+set_location_assignment PIN_132 -to SEG_OUT[55]
+set_location_assignment PIN_131 -to SEG_OUT[54]
+set_location_assignment PIN_128 -to SEG_OUT[53]
+set_location_assignment PIN_127 -to SEG_OUT[52]
+set_location_assignment PIN_126 -to SEG_OUT[51]
+set_location_assignment PIN_125 -to SEG_OUT[50]
+set_location_assignment PIN_124 -to SEG_OUT[49]
+set_location_assignment PIN_123 -to SEG_OUT[48]
+
+set_location_assignment PIN_122 -to SEG_OUT[47]
+set_location_assignment PIN_121 -to SEG_OUT[46]
+set_location_assignment PIN_120 -to SEG_OUT[45]
+set_location_assignment PIN_119 -to SEG_OUT[44]
+set_location_assignment PIN_118 -to SEG_OUT[43]
+set_location_assignment PIN_117 -to SEG_OUT[42]
+set_location_assignment PIN_116 -to SEG_OUT[41]
+set_location_assignment PIN_115 -to SEG_OUT[40]
+
+set_location_assignment PIN_114 -to SEG_OUT[39]
+set_location_assignment PIN_113 -to SEG_OUT[38]
+set_location_assignment PIN_108 -to SEG_OUT[37]
+set_location_assignment PIN_107 -to SEG_OUT[36]
+set_location_assignment PIN_106 -to SEG_OUT[35]
+set_location_assignment PIN_105 -to SEG_OUT[34]
+set_location_assignment PIN_104 -to SEG_OUT[33]
+set_location_assignment PIN_101 -to SEG_OUT[32]
+
+set_location_assignment PIN_100 -to SEG_OUT[31]
+set_location_assignment PIN_99 -to SEG_OUT[30]
+set_location_assignment PIN_98 -to SEG_OUT[29]
+set_location_assignment PIN_95 -to SEG_OUT[28]
+set_location_assignment PIN_94 -to SEG_OUT[27]
+set_location_assignment PIN_93 -to SEG_OUT[26]
+set_location_assignment PIN_88 -to SEG_OUT[25]
+set_location_assignment PIN_87 -to SEG_OUT[24]
+
+set_location_assignment PIN_86 -to SEG_OUT[23]
+set_location_assignment PIN_85 -to SEG_OUT[22]
+set_location_assignment PIN_84 -to SEG_OUT[21]
+set_location_assignment PIN_83 -to SEG_OUT[20]
+set_location_assignment PIN_82 -to SEG_OUT[19]
+set_location_assignment PIN_79 -to SEG_OUT[18]
+set_location_assignment PIN_78 -to SEG_OUT[17]
+set_location_assignment PIN_77 -to SEG_OUT[16]
+
+set_location_assignment PIN_76 -to SEG_OUT[15]
+set_location_assignment PIN_75 -to SEG_OUT[14]
+set_location_assignment PIN_74 -to SEG_OUT[13]
+set_location_assignment PIN_73 -to SEG_OUT[12]
+set_location_assignment PIN_68 -to SEG_OUT[11]
+set_location_assignment PIN_67 -to SEG_OUT[10]
+set_location_assignment PIN_66 -to SEG_OUT[9]
+set_location_assignment PIN_65 -to SEG_OUT[8]
+
+set_location_assignment PIN_64 -to SEG_OUT[7]
+set_location_assignment PIN_63 -to SEG_OUT[6]
+set_location_assignment PIN_62 -to SEG_OUT[5]
+set_location_assignment PIN_61 -to SEG_OUT[4]
+set_location_assignment PIN_60 -to SEG_OUT[3]
+set_location_assignment PIN_59 -to SEG_OUT[2]
+set_location_assignment PIN_58 -to SEG_OUT[1]
+set_location_assignment PIN_57 -to SEG_OUT[0]
+
+set_global_assignment -name VERILOG_FILE ir_dec.v
+set_global_assignment -name VERILOG_FILE testbench.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
